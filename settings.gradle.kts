@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "NVB_SuperApp"
 include(":app")
- 
+include(":utilities")
