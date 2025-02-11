@@ -87,4 +87,7 @@ dependencies {
 
     // splash screen
     implementation(libs.splash.screen)
+
+    // Coil
+    implementation(libs.coil)
 }

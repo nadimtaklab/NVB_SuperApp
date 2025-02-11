@@ -1,7 +1,6 @@
 package com.nvb_superapp
 
 import android.app.Application
-import android.util.Log
 import com.example.utilities.logging.AppLogger
 import dagger.hilt.android.HiltAndroidApp
 
@@ -10,6 +9,8 @@ class SuperApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         AppLogger.d(message = "Application is launched")
+
+
     }
 
     companion object {
