@@ -9,7 +9,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.nvb_superapp.presentation.ui.theme.black
 
@@ -18,7 +20,8 @@ fun TextComponent(
     modifier: Modifier,
     textValue: String,
     textColorValue: Color = black,
-    fontSizeValue: TextUnit = 16.sp
+    fontSizeValue: TextUnit = 16.sp,
+    paddingValue: Dp = 0.dp
 ){
     Text(
         modifier = modifier,
