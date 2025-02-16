@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import coil3.imageLoader
 import coil3.util.DebugLogger
@@ -36,9 +37,9 @@ fun HomeScreen(){
                 .padding(innerPadding)
         ){
             BannerComponent(
-                title = "hello world",
-                description= "this is a preview",
-                imageUrl = "https://thumbs.dreamstime.com/b/futuristic-cyberpunk-girl-digital-backdrop-vibrant-neon-colors-intense-gaze-intricate-details-modern-aesthetic-copy-space-354206649.jpg",
+                title = stringResource(R.string.wealth),
+                description= stringResource(R.string.invest_your_idea),
+                imageUrl = null,
                 resourceValue = R.drawable.ic_wealth
             )
         }

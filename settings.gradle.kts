@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "NVB_SuperApp"
 include(":app")
 include(":utilities")
+include(":wealth")
+include(":design")

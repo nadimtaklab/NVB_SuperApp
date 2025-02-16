@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">NVB_SuperApp</string>
     <string name="add_address">Add Address</string>
+    <string name="wealth">Wealth</string>
+    <string name="invest_your_idea">Invest Your Idea</string>
 </resources>
