@@ -1,10 +1,10 @@
-package com.nvb_superapp.presentation.components
+package com.example.design.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -18,33 +18,36 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import com.nvb_superapp.R
-import com.nvb_superapp.presentation.ui.theme.PrimaryColor
-import com.nvb_superapp.presentation.ui.theme.SecondaryColor
-import com.nvb_superapp.presentation.ui.theme.white
+import com.example.design.ui.theme.white
 
 @Composable
 fun BannerComponent(
     title: String? = null,
     description: String? = null,
     imageUrl: String? = null,
-    resourceValue: Int? = null
+    resourceValue: Int? = null,
+    bannerClicked: () -> Unit = {}
 ) {
     Box(
         modifier = Modifier.fillMaxWidth()
             .wrapContentHeight()
+            .clickable {
+                bannerClicked()
+            }
             .padding(12.dp)
             .clip(
                 shape = RoundedCornerShape(12.dp)
             )
             .background(
                 brush = Brush.horizontalGradient(
-                    colors = listOf(PrimaryColor, SecondaryColor)
+                    colors = listOf(
+                        com.example.design.ui.theme.PrimaryColor,
+                        com.example.design.ui.theme.SecondaryColor
+                    )
                 )
             )
     ) {
@@ -110,9 +113,9 @@ fun BannerComponent(
 @Composable
 fun BannerComponentPreview(){
     BannerComponent(
-        title = stringResource(R.string.wealth),
-        description= stringResource(R.string.invest_your_idea),
+        title = "Hello WOrld",
+        description= "This is some description",
         imageUrl = null,
-        resourceValue = R.drawable.ic_wealth
+        resourceValue = null
     )
 }

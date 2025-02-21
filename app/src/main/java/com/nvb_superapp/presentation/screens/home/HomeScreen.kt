@@ -9,22 +9,27 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import coil3.imageLoader
-import coil3.util.DebugLogger
 import com.nvb_superapp.R
-import com.nvb_superapp.presentation.components.AppToolbar
-import com.nvb_superapp.presentation.components.BannerComponent
-import com.nvb_superapp.presentation.ui.theme.white
+import com.example.design.components.AppToolbar
+import com.example.design.components.BannerComponent
 
 @Composable
-fun HomeScreen(){
+fun HomeScreen(
+    primaryButtonClicked : () -> Unit = {},
+    wealthBannerClicked : () -> Unit = {}
+){
 
     Scaffold(
         topBar = {
-            AppToolbar()
+            AppToolbar(
+                title = stringResource(R.string.add_address),
+                isNotificationButtonVisible = true,
+                primaryButtonClicked = {
+                    primaryButtonClicked()
+                }
+            )
         }
     )
     { innerPadding ->
@@ -33,14 +38,17 @@ fun HomeScreen(){
             modifier = Modifier
                 .fillMaxSize()
                 .wrapContentSize(Alignment.TopCenter)
-                .background(white)
+                .background(com.example.design.ui.theme.white)
                 .padding(innerPadding)
         ){
             BannerComponent(
                 title = stringResource(R.string.wealth),
                 description= stringResource(R.string.invest_your_idea),
                 imageUrl = null,
-                resourceValue = R.drawable.ic_wealth
+                resourceValue = R.drawable.ic_wealth,
+                bannerClicked = {
+                    wealthBannerClicked()
+                }
             )
         }
 

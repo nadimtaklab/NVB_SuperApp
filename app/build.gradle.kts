@@ -54,12 +54,15 @@ android {
         compose = true
         buildConfig = true
     }
+
 }
 
 dependencies {
 
     // adding small module loggerApp
     implementation(project(":utilities"))
+    implementation(project(":design"))
+    implementation(project(":wealth"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

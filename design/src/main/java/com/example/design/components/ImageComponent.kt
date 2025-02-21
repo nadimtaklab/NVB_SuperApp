@@ -1,4 +1,4 @@
-package com.nvb_superapp.presentation.components
+package com.example.design.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable

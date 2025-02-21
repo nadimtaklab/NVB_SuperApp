@@ -1,4 +1,4 @@
-package com.nvb_superapp.presentation.ui.theme
+package com.example.design.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
